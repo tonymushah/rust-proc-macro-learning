@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 use rpml_macros::IntoStringHashMap;
 
 #[derive(Debug, IntoStringHashMap)]
@@ -8,5 +10,13 @@ struct User {
 }
 
 fn main() {
-    println!("Hello, world!");
+    let user = User {
+        username: "username".to_string(),
+        first_name: "First".to_string(),
+        last_name: "Last".to_string(),
+    };
+
+    let hash_map = HashMap::<String, String>::from(user);
+
+    dbg!(hash_map);
 }
