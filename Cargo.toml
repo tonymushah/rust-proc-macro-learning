@@ -3,6 +3,7 @@ workspace = { members = ["rpml-macros"] }
 name = "rust-proc-macro-learning"
 version = "0.1.0"
 edition = "2021"
+resolver = "2"
 
 [dependencies]
 rpml-macros = { version = "0.1.0", path = "rpml-macros" }
