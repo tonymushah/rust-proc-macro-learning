@@ -35,3 +35,8 @@ pub fn derive_into_hashmap(item: TokenStream) -> TokenStream {
 pub fn derive_custom_model(item: TokenStream) -> TokenStream {
     custom_model::custom_model_impl(item)
 }
+
+#[proc_macro_attribute]
+pub fn log_duration(args: TokenStream, item: TokenStream) -> TokenStream {
+    todo!()
+}
