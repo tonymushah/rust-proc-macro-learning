@@ -1,3 +1,5 @@
+mod custom_model;
+
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, Data, DataStruct, DeriveInput};
@@ -31,5 +33,5 @@ pub fn derive_into_hashmap(item: TokenStream) -> TokenStream {
 
 #[proc_macro_derive(DeriveCustomModel, attributes(custom_model))]
 pub fn derive_custom_model(item: TokenStream) -> TokenStream {
-    todo!()
+    custom_model::custom_model_impl(item)
 }
