@@ -28,3 +28,8 @@ pub fn derive_into_hashmap(item: TokenStream) -> TokenStream {
         _ => unimplemented!()
     }.into()
 }
+
+#[proc_macro_derive(DeriveCustomModel, attributes(custom_model))]
+pub fn derive_custom_model(item: TokenStream) -> TokenStream {
+    todo!()
+}
