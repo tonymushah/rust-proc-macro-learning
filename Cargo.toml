@@ -6,4 +6,5 @@ edition = "2021"
 resolver = "2"
 
 [dependencies]
+cacache = { version = "13.0.0", default-features = false, features = ["mmap"] }
 rpml-macros = { version = "0.1.0", path = "rpml-macros" }
